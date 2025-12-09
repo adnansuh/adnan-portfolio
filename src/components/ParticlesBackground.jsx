@@ -1,27 +1,30 @@
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
+import { useTheme } from "../context/ThemeContext";
 
 export default function ParticlesBackground() {
+  const { theme } = useTheme(); // ← listen to theme changes
+
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
 
-  console.log("⚡ PARTICLES RENDERED"); // Leave this for debugging
-
   return (
     <Particles
+      key={theme}   // ← RELOAD particles when theme changes
       id="tsparticles"
       init={particlesInit}
       options={{
         background: { color: "transparent" },
         fpsLimit: 120,
+        fullScreen: { enable: false },
         particles: {
           number: { value: 80, density: { enable: true, area: 800 } },
-          color: { value: "#c084fc" }, // Use a solid color first
+          color: { value: getComputedStyle(document.documentElement).getPropertyValue("--primary").trim() },
           links: {
             enable: true,
-            color: "#c084fc",
+            color: getComputedStyle(document.documentElement).getPropertyValue("--primary").trim(),
             distance: 150,
             opacity: 0.4,
             width: 1,
