@@ -15,7 +15,7 @@ function Contact() {
       <div className="max-w-6xl mx-auto text-center">
 
         {/* Heading */}
-        <h2 className="text-4xl font-bold text-purpleNeon mb-4">
+        <h2 className="text-4xl font-bold text-primary mb-4">
           Get in Touch
         </h2>
 
@@ -29,18 +29,19 @@ function Contact() {
           className="
             max-w-xl mx-auto p-8 rounded-2xl 
             bg-black/30 backdrop-blur-xl
-            border border-purple-500/20
-            shadow-[0_0_25px_rgba(168,85,247,0.25)]
-            hover:shadow-[0_0_45px_rgba(168,85,247,0.5)]
+            border border-white/10
+            shadow-[0_0_25px_rgba(0,0,0,0.4)]
+            hover:border-primary 
+            hover:shadow-[0_0_35px_var(--primary)]
             transition-all duration-500
           "
         >
           {/* Email */}
           <div className="flex items-center gap-4 mb-6 text-gray-200">
-            <FaEnvelope className="text-purpleNeon text-xl" />
+            <FaEnvelope className="text-primary text-xl" />
             <a
               href="mailto:adnansuhail88@gmail.com"
-              className="hover:text-purpleNeon transition"
+              className="hover:text-primary transition"
             >
               adnansuhail88@gmail.com
             </a>
@@ -48,35 +49,35 @@ function Contact() {
 
           {/* GitHub */}
           <div className="flex items-center gap-4 mb-6 text-gray-200">
-            <FaGithub className="text-purpleNeon text-xl" />
+            <FaGithub className="text-primary text-xl" />
             <a
               href="https://github.com/adnansuh"
               target="_blank"
-              className="hover:text-purpleNeon transition"
+              className="hover:text-primary transition"
             >
               github.com/adnansuh
             </a>
           </div>
 
-          {/* LinkedIn - Updated */}
+          {/* LinkedIn */}
           <div className="flex items-center gap-4 mb-6 text-gray-200">
-            <FaLinkedin className="text-purpleNeon text-xl" />
+            <FaLinkedin className="text-primary text-xl" />
             <a
               href="https://www.linkedin.com/in/adnan-suhail-39432a244"
               target="_blank"
-              className="hover:text-purpleNeon transition"
+              className="hover:text-primary transition"
             >
               linkedin.com/in/adnan-suhail-39432a244
             </a>
           </div>
 
-          {/* WhatsApp - Updated phone number */}
+          {/* WhatsApp */}
           <div className="flex items-center gap-4 text-gray-200">
-            <FaWhatsapp className="text-purpleNeon text-xl" />
+            <FaWhatsapp className="text-primary text-xl" />
             <a
               href="https://wa.me/919846913180"
               target="_blank"
-              className="hover:text-purpleNeon transition"
+              className="hover:text-primary transition"
             >
               +91 9846913180
             </a>
@@ -85,18 +86,18 @@ function Contact() {
 
         {/* Map Section */}
         <div className="mt-20 max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold text-purpleNeon mb-6">
+          <h3 className="text-3xl font-bold text-primary mb-6">
             My Location
           </h3>
 
           <div
             className="
               relative rounded-2xl overflow-hidden
-              border border-purple-500/30 
+              border border-primary/40
               backdrop-blur-xl
               bg-black/20
-              shadow-[0_0_25px_5px_rgba(168,85,247,0.35)]
-              hover:shadow-[0_0_35px_10px_rgba(168,85,247,0.6)]
+              shadow-[0_0_30px_5px_var(--primary)]
+              hover:shadow-[0_0_45px_10px_var(--primary)]
               transition-all duration-500
             "
             style={{ height: "380px" }}
@@ -124,8 +125,8 @@ function Contact() {
                 left-1/2 top-1/2 
                 transform -translate-x-1/2 -translate-y-1/2
                 w-6 h-6 rounded-full
-                bg-purple-500
-                shadow-[0_0_25px_8px_rgba(168,85,247,0.9)]
+                bg-primary
+                shadow-[0_0_25px_8px_var(--primary)]
                 animate-pulse
               "
             ></div>
@@ -137,7 +138,7 @@ function Contact() {
                 left-1/2 top-1/2 
                 transform -translate-x-1/2 -translate-y-1/2
                 w-12 h-12 rounded-full
-                border-2 border-purple-400/50
+                border-2 border-primary/50
                 animate-ping
               "
             ></div>
@@ -145,10 +146,11 @@ function Contact() {
             {/* Glow Overlay */}
             <div className="
               pointer-events-none absolute inset-0 rounded-2xl 
-              shadow-[0_0_50px_15px_rgba(168,85,247,0.4)] opacity-40
+              shadow-[0_0_50px_15px_var(--primary)] opacity-40
             "></div>
           </div>
         </div>
+
       </div>
     </section>
   );

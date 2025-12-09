@@ -6,7 +6,6 @@ export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
-    console.log("Particles component loaded!");
 
   return (
     <Particles
@@ -19,10 +18,10 @@ export default function ParticlesBackground() {
         fullScreen: { enable: false },
         particles: {
           number: { value: 80, density: { enable: true, area: 800 } },
-          color: { value: "#bb86fc" },
+          color: { value: "var(--primary)" }, // theme-aware!
           links: {
             enable: true,
-            color: "#bb86fc",
+            color: "var(--primary)",
             distance: 150,
             opacity: 0.4,
             width: 1,
@@ -35,10 +34,8 @@ export default function ParticlesBackground() {
           },
           opacity: { value: 0.5 },
           size: { value: { min: 1, max: 3 } },
-        }
+        },
       }}
     />
   );
-
-
 }

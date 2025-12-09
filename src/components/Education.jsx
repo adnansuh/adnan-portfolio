@@ -2,18 +2,18 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FiArrowUpRight } from "react-icons/fi";
 
-// Parent animation: stagger children
+// Parent animation
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.25, // delay between card animations
+      staggerChildren: 0.25,
     },
   },
 };
 
-// Child animation: fade-in + slide-up
+// Child animation
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
   show: { opacity: 1, y: 0 },
@@ -46,7 +46,7 @@ function Education() {
 
   return (
     <section id="education" className="pt-28 pb-28 px-6">
-      <h2 className="text-center text-5xl font-bold text-purpleNeon mb-12">
+      <h2 className="text-center text-5xl font-bold text-primary mb-12">
         Education
       </h2>
 
@@ -61,14 +61,18 @@ function Education() {
         {educationData.map((item, index) => (
           <motion.a
             key={index}
-            variants={cardVariants} // apply stagger animation
+            variants={cardVariants}
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-between gap-6 p-6 rounded-2xl bg-white/5 
-                       backdrop-blur-lg border border-white/10 shadow-lg
-                       hover:bg-white/10 hover:border-purpleNeon/40 hover:shadow-purpleNeon/20
-                       transition cursor-pointer"
+            className="
+              group flex items-center justify-between gap-6 p-6
+              rounded-2xl bg-white/5 backdrop-blur-lg
+              border border-white/10 shadow-lg
+              hover:bg-white/10 hover:border-primary
+              hover:shadow-[0_0_25px_var(--primary)]
+              transition cursor-pointer
+            "
           >
             {/* Left Section */}
             <div className="flex items-center gap-6">
@@ -79,7 +83,7 @@ function Education() {
               />
 
               <div>
-                <h3 className="text-2xl font-semibold text-purpleAccent">
+                <h3 className="text-2xl font-semibold text-accent">
                   {item.title}
                 </h3>
                 <p className="text-gray-300 mt-1">{item.subtitle}</p>
@@ -87,11 +91,13 @@ function Education() {
               </div>
             </div>
 
-            {/* Animated Arrow */}
+            {/* Arrow Icon */}
             <FiArrowUpRight
-              className="text-purpleAccent text-3xl opacity-0 translate-x-[-10px]
-                         group-hover:opacity-100 group-hover:translate-x-0
-                         transition-all duration-300"
+              className="
+                text-accent text-3xl opacity-0 -translate-x-2
+                group-hover:opacity-100 group-hover:translate-x-0
+                transition-all duration-300
+              "
             />
           </motion.a>
         ))}

@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --primary: #c084fc; /* purpleNeon */
+  --accent: #a855f7;  /* purpleAccent */
+}
+
+[data-theme="red"] {
+  --primary: #ff4d4d;  /* neon red */
+  --accent: #ff1a1a;   /* dark red */
+}
 
 body {
   margin: 0;
@@ -22,3 +31,28 @@ html, body, #root {
   margin: 0;
   padding: 0;
 }
+/* Tailwind color utilities using CSS variables */
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.text-accent {
+  color: var(--accent) !important;
+}
+
+.bg-accent {
+  background-color: var(--accent) !important;
+}
+
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+.border-accent {
+  border-color: var(--accent) !important;
+}
+

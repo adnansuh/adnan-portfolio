@@ -12,44 +12,48 @@ function About() {
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-bold text-purpleNeon mb-10 text-center"
+        className="text-4xl md:text-5xl font-bold text-primary mb-10 text-center"
       >
         About Me
       </motion.h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         
-        {/* LEFT SIDE — Text */}
+        {/* LEFT SIDE — TEXT */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
           <p className="text-gray-300 text-lg leading-relaxed mb-6">
-            I'm <span className="text-purpleNeon font-semibold">Adnan Suhail</span>, 
+            I'm <span className="text-primary font-semibold">Adnan Suhail</span>, 
             a passionate MERN Stack Developer who loves building clean, modern, 
             and scalable web applications.
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed mb-6">
-            I focus on JavaScript, React, Node.js and continue to improve my 
-            Data Structures & Algorithms knowledge to enhance problem-solving skills.
+            I focus on JavaScript, React, Node.js and continuously improve my 
+            Data Structures & Algorithms knowledge to strengthen problem-solving skills.
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed">
-            I enjoy learning new technologies and creating projects that help me 
-            grow as a developer — one step at a time.
+            I enjoy learning new technologies and building projects that help me 
+            grow — one step at a time.
           </p>
         </motion.div>
 
-        {/* RIGHT SIDE — Glass Card */}
+        {/* RIGHT SIDE — GLASS CARD */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
-          className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-lg shadow-lg"
+          className="
+            p-6 rounded-xl bg-white/5 border border-white/10 
+            backdrop-blur-lg shadow-lg
+            hover:border-primary transition
+          "
         >
-          <h3 className="text-2xl font-semibold text-purpleAccent mb-4">
+          <h3 className="text-2xl font-semibold text-accent mb-4">
             Skills Snapshot
           </h3>
 

@@ -8,24 +8,24 @@ import Education from "./components/Education";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import ParticlesBackground from "./components/ParticlesBackground";
-
-
-
+import { ThemeProvider } from "./context/ThemeContext";
 
 function App() {
   return (
-    <div className="relative min-h-screen text-white overflow-x-hidden">
-      <ParticlesBackground />
-      <Navbar />
-      <Hero />
-      <About />
-      <Education />
-      <Certifications />
-      <Skills />
-      <Resume />
-      <Contact />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="relative min-h-screen text-white overflow-x-hidden">
+        <ParticlesBackground />
+        <Navbar />
+        <Hero />
+        <About />
+        <Education />
+        <Certifications />
+        <Skills />
+        <Resume />
+        <Contact />
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
 

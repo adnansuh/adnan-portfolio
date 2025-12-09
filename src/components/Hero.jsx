@@ -22,7 +22,7 @@ function Hero() {
       {/* LEFT SIDE CONTENT */}
       <div className="max-w-2xl">
         
-        {/* NAME ANIMATION */}
+        {/* Animated Name */}
         <motion.h1
           className="text-5xl lg:text-6xl font-bold leading-tight"
           initial="hidden"
@@ -34,7 +34,7 @@ function Hero() {
           {"Adnan Suhail".split("").map((char, index) => (
             <motion.span
               key={index}
-              className="text-purpleNeon inline-block"
+              className="text-primary inline-block"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: {
@@ -49,15 +49,17 @@ function Hero() {
           ))}
         </motion.h1>
 
-        <h2 className="text-2xl lg:text-3xl mt-4 text-purpleAccent font-semibold">
+        {/* Subtitle */}
+        <h2 className="text-2xl lg:text-3xl mt-4 text-accent font-semibold">
           MERN Stack Developer & Cybersecurity Enthusiast
         </h2>
 
+        {/* Description */}
         <p className="mt-6 text-lg text-gray-300 leading-relaxed">
           I build modern, secure full-stack applications using MongoDB,
           Express.js, React.js, and Node.js.  
-          With hands-on penetration testing experience, I ensure the software I build
-          is <span className="text-purpleNeon font-medium">secure and hack-resistant</span>.
+          With hands-on penetration testing experience, I ensure the software I build is  
+          <span className="text-primary font-medium"> secure and hack-resistant</span>.
         </p>
 
         {/* CONTACT BUTTON */}
@@ -65,8 +67,8 @@ function Hero() {
           href="#contact"
           className="
             inline-block mt-8 px-6 py-3 text-lg font-semibold 
-            bg-purpleNeon text-black rounded-lg 
-            hover:bg-purpleAccent 
+            bg-primary text-black rounded-lg 
+            hover:bg-accent 
             transition-all shadow-lg
           "
         >
@@ -74,7 +76,7 @@ function Hero() {
         </a>
       </div>
 
-      {/* RIGHT SIDE LOTTIE */}
+      {/* Right Side Lottie Animation */}
       <div className="w-[300px] lg:w-[450px] mt-10 lg:mt-0">
         <Lottie animationData={animationData} loop={true} />
       </div>

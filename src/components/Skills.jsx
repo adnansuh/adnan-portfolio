@@ -40,7 +40,7 @@ function Skills() {
 
   return (
     <section id="skills" className="pt-28 pb-28 px-6 relative z-10">
-      <h2 className="text-center text-5xl font-bold text-purpleNeon mb-12">
+      <h2 className="text-center text-5xl font-bold text-primary mb-12">
         Skills
       </h2>
 
@@ -48,7 +48,7 @@ function Skills() {
         variants={containerVariants}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.2 }}
         className="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6"
       >
         {skills.map((skill, index) => (
@@ -57,10 +57,21 @@ function Skills() {
             variants={skillVariants}
             className="
               p-6 rounded-xl bg-white/5 backdrop-blur-lg
-              border border-white/10 shadow-lg
-              hover:bg-white/10 hover:border-purpleNeon/40
-              hover:shadow-purpleNeon/20 transition text-center
+              border border-white/10 
+              transition-all text-center cursor-default
             "
+            style={{
+              boxShadow: "0 0 18px rgba(255,255,255,0.05)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.border = "1px solid var(--primary)";
+              e.currentTarget.style.boxShadow = "0 0 25px var(--primary)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.border = "1px solid rgba(255,255,255,0.1)";
+              e.currentTarget.style.boxShadow =
+                "0 0 18px rgba(255,255,255,0.05)";
+            }}
           >
             <div className="text-4xl mb-3">{skill.icon}</div>
             <p className="text-gray-300 font-medium">{skill.name}</p>

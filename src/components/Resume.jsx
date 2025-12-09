@@ -21,22 +21,22 @@ function Resume() {
       <div className="max-w-5xl mx-auto">
 
         {/* TITLE */}
-        <h2 className="text-5xl font-extrabold text-center text-purpleNeon mb-12">
+        <h2 className="text-5xl font-extrabold text-center text-primary mb-12">
           My Resume
         </h2>
 
         {/* RESUME CARD */}
         <div
           className="
-            bg-black/40 border border-purple-500/40 
+            bg-black/40 border border-primary/40 
             rounded-2xl p-10 backdrop-blur-xl
-            shadow-[0_0_25px_rgba(168,85,247,0.25)]
-            hover:shadow-[0_0_45px_rgba(168,85,247,0.5)]
+            shadow-[0_0_25px_var(--primary)]
+            hover:shadow-[0_0_45px_var(--primary)]
             transition-all duration-500
           "
         >
           {/* Summary */}
-          <h3 className="text-3xl font-bold mb-4 text-purpleNeon">
+          <h3 className="text-3xl font-bold mb-4 text-primary">
             Professional Summary
           </h3>
 
@@ -48,14 +48,14 @@ function Resume() {
           </p>
 
           {/* SKILLS SECTION */}
-          <h3 className="text-3xl font-bold mb-6 text-purpleNeon">Skills</h3>
+          <h3 className="text-3xl font-bold mb-6 text-primary">Skills</h3>
 
           <div className="grid md:grid-cols-3 gap-6 mb-10">
 
             {/* Development */}
-            <div className="p-6 rounded-xl bg-black/30 border border-purple-500/20 shadow">
-              <FaLaptopCode className="text-purpleNeon text-3xl mb-3" />
-              <h4 className="text-xl font-semibold mb-3 text-purpleAccent">
+            <div className="p-6 rounded-xl bg-black/30 border border-primary/20 shadow">
+              <FaLaptopCode className="text-primary text-3xl mb-3" />
+              <h4 className="text-xl font-semibold mb-3 text-accent">
                 Development
               </h4>
               <ul className="text-gray-300 space-y-2">
@@ -66,9 +66,9 @@ function Resume() {
             </div>
 
             {/* Backend & Database */}
-            <div className="p-6 rounded-xl bg-black/30 border border-purple-500/20 shadow">
-              <FaNetworkWired className="text-purpleNeon text-3xl mb-3" />
-              <h4 className="text-xl font-semibold mb-3 text-purpleAccent">
+            <div className="p-6 rounded-xl bg-black/30 border border-primary/20 shadow">
+              <FaNetworkWired className="text-primary text-3xl mb-3" />
+              <h4 className="text-xl font-semibold mb-3 text-accent">
                 Backend & Database
               </h4>
               <ul className="text-gray-300 space-y-2">
@@ -79,9 +79,9 @@ function Resume() {
             </div>
 
             {/* Cybersecurity */}
-            <div className="p-6 rounded-xl bg-black/30 border border-purple-500/20 shadow">
-              <FaShieldAlt className="text-purpleNeon text-3xl mb-3" />
-              <h4 className="text-xl font-semibold mb-3 text-purpleAccent">
+            <div className="p-6 rounded-xl bg-black/30 border border-primary/20 shadow">
+              <FaShieldAlt className="text-primary text-3xl mb-3" />
+              <h4 className="text-xl font-semibold mb-3 text-accent">
                 Cybersecurity
               </h4>
               <ul className="text-gray-300 space-y-2">
@@ -101,9 +101,9 @@ function Resume() {
               className="
                 inline-flex items-center gap-3
                 px-8 py-4 text-lg font-semibold
-                bg-purpleNeon text-black rounded-xl
-                shadow-[0_0_20px_rgba(168,85,247,0.8)]
-                hover:bg-purpleAccent hover:shadow-[0_0_35px_rgba(168,85,247,1)]
+                bg-primary text-black rounded-xl
+                shadow-[0_0_20px_var(--primary)]
+                hover:bg-accent hover:shadow-[0_0_35px_var(--accent)]
                 transition-all duration-300
               "
             >
