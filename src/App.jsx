@@ -13,8 +13,11 @@ import { ThemeProvider } from "./context/ThemeContext";
 function App() {
   return (
     <ThemeProvider>
-      <div className="relative min-h-screen text-white overflow-x-hidden">
-        <ParticlesBackground />
+
+      {/* Particles with real fixed Z index */}
+      <ParticlesBackground />
+
+      <div className="relative z-20 text-white overflow-x-hidden">
         <Navbar />
         <Hero />
         <About />
@@ -25,6 +28,7 @@ function App() {
         <Contact />
         <Footer />
       </div>
+
     </ThemeProvider>
   );
 }

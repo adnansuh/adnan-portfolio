@@ -7,21 +7,21 @@ export default function ParticlesBackground() {
     await loadSlim(engine);
   }, []);
 
+  console.log("⚡ PARTICLES RENDERED"); // Leave this for debugging
+
   return (
     <Particles
       id="tsparticles"
       init={particlesInit}
-      className="absolute inset-0 -z-10 pointer-events-none"
       options={{
         background: { color: "transparent" },
         fpsLimit: 120,
-        fullScreen: { enable: false },
         particles: {
           number: { value: 80, density: { enable: true, area: 800 } },
-          color: { value: "var(--primary)" }, // theme-aware!
+          color: { value: "#c084fc" }, // Use a solid color first
           links: {
             enable: true,
-            color: "var(--primary)",
+            color: "#c084fc",
             distance: 150,
             opacity: 0.4,
             width: 1,
