@@ -27,7 +27,7 @@ function Certifications() {
           </p>
 
           <a
-            href="/penetration-tester-certificate.pdf" 
+            href="/cpt.pdf" 
             download
             className="inline-flex items-center gap-2 px-5 py-3 bg-purpleAccent text-black font-semibold rounded-lg shadow-lg hover:bg-purpleNeon transition"
           >
